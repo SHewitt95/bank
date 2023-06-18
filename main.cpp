@@ -37,9 +37,30 @@ Phase N
 */
 
 #include <iostream>
+#include <string>
 
 using std::cout;
 using std::cin;
+using std::string;
+
+class Screen {
+private:
+    string prompt;
+
+public:
+    Screen(): prompt("I am a Screen") {};
+    void show_prompt();
+    unsigned int handle_input(unsigned int input);
+};
+
+class AppManager {
+private:
+    unsigned int current_screen;
+    // Using 5 as a placeholder. Not real # of screens.
+    Screen screens[5];
+
+public:
+};
 
 int main() {
 
