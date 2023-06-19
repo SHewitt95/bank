@@ -5,6 +5,13 @@ A toy app for practicing C++ and Object-Oriented Programming.
 
 ## Diagram
 ```mermaid
-graph TD;
-    A -->|Start| B(Log in with ID, Create ID);
+---
+title: App State Machine
+---
+stateDiagram-v2
+    [*] --> Login: Start
+    Login --> Verification: Log In
+    Login --> AccountManagement: Create Account
+    Verification --> AccountManagement: Login Success
+    Verification --> Login: Login Fail
 ```
